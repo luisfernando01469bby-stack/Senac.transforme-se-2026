@@ -13,8 +13,8 @@ $color-about: #acd4f9;
 $color-feature: #acf9c0;
 $color-prices: #f2f9ac;
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+BR+Guides&family=Playwrite+DE+SAS+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-$font-primary: "Playwrite DE SAS Guides", cursive, normal;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playwrite+BR+Guides&family=Playwrite+DE+SAS+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+$font-primary: "Merriweather", serif, normal;
 $font-secondary: "Roboto", sans-serif, normal;
 
 /* =========================================================
@@ -440,6 +440,14 @@ $text-alignments: (
 
 .flex {
     display: flex;
+}
+
+.column{
+    flex-direction: colun;
+}
+
+.hidden{
+    display: none;
 }
 
 
