@@ -1029,4 +1029,12 @@ a {
   z-index: 50;
 }
 
+.font-primary {
+  font-family: "Merriweather", serif, normal;
+}
+
+.font-secondary {
+  font-family: "Roboto", sans-serif, normal;
+}
+
 /*# sourceMappingURL=style.css.map */

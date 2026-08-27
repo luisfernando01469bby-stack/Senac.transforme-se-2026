@@ -6,11 +6,12 @@
 </head>
 
 <body>
-    <h2 id="Bemvindo">Bem-vindo, user!</h2>
+    <h2 id="Bemvindo"></h2>
 
-    <div class="h-full flex">
-        <div id="modalRegister" class="fixed top-0 right-0 bottom-0 left-0 hidden items-center justify-center bg-black-50 z-50">
-            <div class="relative max-w-md w-full p-5 bg-about rounded-lg shadow-md flex column"> 
+
+    <div id="modalRegister"
+        class="fixed top-0 right-0 bottom-0 left-0 hidden items-center justify-center bg-black-50 z-50">
+        <div class="relative max-w-md w-full p-5 bg-about rounded-lg shadow-md flex column">
             <a id="btClose" class="bg-red absolute top-0 text-white px-2 py-2 right-0 rounded-full">X</a>
             <h2>Meu formulário</h2>
             <p>Preencha as informações abaixo</p>
@@ -26,23 +27,23 @@
             </form>
 
         </div>
-        </div>
+    </div>
 
-        <h2>Resposta</h2>
-       <table>
-            <thread>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Ações</th>
-            </thread>
-            <tbody id="listausuarios">
-               
-            </tbody>
-       </table>
-        <a id="AddUser" class="rounded-full bg-primary text-white px-4 py-3 fixed bottom-0 right-0"> + </a>
+    <h2>Resposta</h2>
+    <table>
+        <thread>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </thread>
+        <tbody class="font-secondary" id="listausuarios">
 
-        <script src="user.js"></script>
-        <script src="painel.js"> </script>
+        </tbody>
+    </table>
+    <a id="AddUser" class="rounded-full bg-primary text-white px-4 py-3 fixed bottom-0 right-0"> + </a>
+
+    <script src="user.js"></script>
+    <script src="painel.js"> </script>
 
 </body>
 

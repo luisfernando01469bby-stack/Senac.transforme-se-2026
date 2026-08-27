@@ -1,15 +1,56 @@
 var users = JSON.parse(localStorage.getItem("users"))|| [] 
 var Logado = JSON.parse(localStorage.getItem("logado"))|| {}
-var Bemvindo = document.getElementById("Bem vindo");
-if(Bemvindo && Logado) Bemvindo.innerHTML = "Olá" + Logado.nome
+var Bemvindo = document.getElementById("Bemvindo");
+if(Bemvindo && Logado) Bemvindo.innerHTML = "Olá " + Logado.nome
 
 var listausuarios = document.getElementById("listausuarios")
 if(listausuarios) {
+   let i = 0;
    users.forEach((u) => {
-      console.log(u)
+      let tdName = document.createElement("td");
+      tdName.innerHTML = u.nome;
+
+      let tdEmail = document.createElement("td");
+      tdEmail.innerHTML = u.email;
+
+      let tdAction = document.createElement("td");
+      let btV = document.createElement("a");
+      btV.innerHTML = "v";
+      btV.classList.add("Show");
+      btV.id = i;
+      tdAction.appendChild(btV);
+
+      let span = document.createElement("span");
+      span.innerHTML = " - ";
+      tdAction.appendChild(span); 
+
+      let btR = document.createElement("a");
+      btR.innerHTML = "X";
+      btR.classList.add("remove");
+      btR.id = i;
+      tdAction.appendChild(btR); 
+
+      
+
+      let tr = document.createElement("tr")
+      tr.appendChild(tdName);
+      tr.appendChild(tdEmail);
+      tr.appendChild(tdAction);
+
+      listausuarios.appendChild(tr)
+      //i = i + 1; primeira forma de fazer
+      //i += 1; segundda forma de fazer
+      i++;
    });
 }
 
+var botoesV = document.querySelectorAll(".Show");
+botoesV.forEach((b)=> {
+   b.addEventListener("click", () =>{
+      const id = b.id;
+      b.innerHTML = users[id].nascimento;
+   })
+})
 
 //document é a página toda
 // get= pegar, elemento = elemento do html
@@ -46,7 +87,9 @@ formL?.addEventListener("click", (e) => {
     e.preventDefault(); 
 
     let email = document.getElementById("iEmailLogin").value;
+    console.log (email)
     let pass = document.getElementById("iLoginpass").value;
+    console.log (pass)
 
      let user = users.find(u => {
         return u.email == email
