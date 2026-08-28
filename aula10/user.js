@@ -3,6 +3,41 @@ var Logado = JSON.parse(localStorage.getItem("logado"))|| {}
 var Bemvindo = document.getElementById("Bemvindo");
 if(Bemvindo && Logado) Bemvindo.innerHTML = "Olá " + Logado.nome
 
+/*function name(parametro1, p2){
+   return (cria botão)*/
+
+function createButton(text, action,){
+   let tdAction = document.createElement("td");
+      let bt = document.createElement("a");
+      bt.innerHTML = "text";
+      // para cada classe eu chamo a linha abaixo
+            bt.classList.add(c);
+            bt.innerHTML = "text";
+      bt.classList.add(py-1 );
+      bt.classList.add(mg );
+      bt.classList.add(px-2);
+      bt.classList.add(bg-dark);
+      bt.classList.add(hover:shadow);
+      bt.classList.add(rounded-full );
+       bt.classList.add("cursor-pointer");
+       bt.dataset.id = i;
+      
+      bt.classList.add("cursor-pointer");
+      // aqui vai vir todas as classes estaticas para estilizar o botão
+      bt.dataset.id = i;
+      return bt;
+}
+
+   let tdAction = document.createElement("td");
+   
+
+      let bt = document.createElement("a");
+      
+       
+   
+
+
+
 var listausuarios = document.getElementById("listausuarios")
 if(listausuarios) {
    let i = 0;
@@ -14,21 +49,14 @@ if(listausuarios) {
       tdEmail.innerHTML = u.email;
 
       let tdAction = document.createElement("td");
-      let btV = document.createElement("a");
-      btV.innerHTML = "v";
-      btV.classList.add("Show");
-      btV.id = i;
-      tdAction.appendChild(btV);
+      tdAction.appendChild(createButton("v", "Show", i));
 
       let span = document.createElement("span");
       span.innerHTML = " - ";
       tdAction.appendChild(span); 
 
       let btR = document.createElement("a");
-      btR.innerHTML = "X";
-      btR.classList.add("remove");
-      btR.id = i;
-      tdAction.appendChild(btR); 
+      tdAction.appendChild(createButton("x","remove", i)); 
 
       
 
@@ -47,8 +75,18 @@ if(listausuarios) {
 var botoesV = document.querySelectorAll(".Show");
 botoesV.forEach((b)=> {
    b.addEventListener("click", () =>{
-      const id = b.id;
+      const id = b.dataset.id;
       b.innerHTML = users[id].nascimento;
+   })
+})
+
+var botoesR = document.querySelectorAll(".remove");
+botoesR.forEach((b)=>{
+   b.addEventListener("click", ()=>{
+      const id = b.dataset.id;
+      users.splice(id, 1);
+      localStorage.setItem("users", JSON.stringify(users));
+      window.location.href = "painel.html"
    })
 })
 
