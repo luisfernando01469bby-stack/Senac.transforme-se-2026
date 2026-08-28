@@ -6,37 +6,31 @@ if(Bemvindo && Logado) Bemvindo.innerHTML = "Olá " + Logado.nome
 /*function name(parametro1, p2){
    return (cria botão)*/
 
-function createButton(text, action,){
+function createButton(text, classes,i){
    let tdAction = document.createElement("td");
       let bt = document.createElement("a");
-      bt.innerHTML = "text";
-      // para cada classe eu chamo a linha abaixo
-            bt.classList.add(c);
-            bt.innerHTML = "text";
-      bt.classList.add(py-1 );
-      bt.classList.add(mg );
-      bt.classList.add(px-2);
-      bt.classList.add(bg-dark);
-      bt.classList.add(hover:shadow);
-      bt.classList.add(rounded-full );
-       bt.classList.add("cursor-pointer");
-       bt.dataset.id = i;
+      bt.innerHTML = text;
+      
+      classes.forEach(c =>{
+           bt.classList.add(c);
+      })
+          
+
+
+ bt.classList.add("cursor-pointer");
+    bt.classList.add("px-3");
+    bt.classList.add("mx-4");
+    bt.classList.add("hover:shadow");
+    bt.classList.add("shadow-md");
+    bt.classList.add("text-white");
+    bt.classList.add("rounded-full");
       
       bt.classList.add("cursor-pointer");
       // aqui vai vir todas as classes estaticas para estilizar o botão
       bt.dataset.id = i;
       return bt;
 }
-
-   let tdAction = document.createElement("td");
-   
-
-      let bt = document.createElement("a");
       
-       
-   
-
-
 
 var listausuarios = document.getElementById("listausuarios")
 if(listausuarios) {
@@ -49,16 +43,10 @@ if(listausuarios) {
       tdEmail.innerHTML = u.email;
 
       let tdAction = document.createElement("td");
-      tdAction.appendChild(createButton("v", "Show", i));
+        tdAction.appendChild( createButton("V", ["show","bg-primary"], i) );
+        tdAction.appendChild( createButton("X", ["remove","bg-red"], i) ); 
 
-      let span = document.createElement("span");
-      span.innerHTML = " - ";
-      tdAction.appendChild(span); 
 
-      let btR = document.createElement("a");
-      tdAction.appendChild(createButton("x","remove", i)); 
-
-      
 
       let tr = document.createElement("tr")
       tr.appendChild(tdName);

@@ -491,7 +491,7 @@ a {
    .bg-dark
    ========================================================= */
 .bg-primary {
-  background-color: #f10000;
+  background-color: #1100ff;
 }
 
 .bg-secondary {
@@ -538,7 +538,7 @@ a {
    hover:bg-dark
    ========================================================= */
 .hover\:bg-primary:hover {
-  background-color: #f10000;
+  background-color: #1100ff;
 }
 
 .hover\:bg-secondary:hover {
@@ -577,7 +577,7 @@ a {
    14. BACKGROUND + FOCUS
    ========================================================= */
 .focus\:bg-primary:focus {
-  background-color: #f10000;
+  background-color: #1100ff;
 }
 
 .focus\:bg-secondary:focus {
@@ -616,7 +616,7 @@ a {
    15. BACKGROUND + ACTIVE
    ========================================================= */
 .active\:bg-primary:active {
-  background-color: #f10000;
+  background-color: #1100ff;
 }
 
 .active\:bg-secondary:active {
@@ -663,7 +663,7 @@ a {
 }
 
 .text-primary {
-  color: #f10000;
+  color: #1100ff;
 }
 
 .text-secondary {
@@ -682,7 +682,7 @@ a {
 }
 
 .hover\:text-primary:hover {
-  color: #f10000;
+  color: #1100ff;
 }
 
 .hover\:text-secondary:hover {
@@ -949,7 +949,7 @@ a {
 }
 
 .focus\:outline-primary:focus {
-  outline: 2px solid #f10000;
+  outline: 2px solid #1100ff;
   outline-offset: 2px;
 }
 
